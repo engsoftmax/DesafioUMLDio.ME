@@ -1,0 +1,32 @@
+@startuml 
+
+class iPhone {
+  +reproduzirMusica() : void
+  +fazerChamada(numero: String) : void
+  +navegarInternet(url: String) : void
+}
+
+class ReprodutorMusical {
+  +play() : void
+  +pause() : void
+  +proximo() : void
+  +anterior() : void
+}
+
+class AparelhoTelefonico {
+  +ligar() : void
+  +desligar() : void
+  +receberChamada() : void
+}
+
+class NavegadorInternet {
+  +abrirPagina(url: String) : void
+  +fecharPagina() : void
+  +voltar() : void
+}
+
+iPhone --|> ReprodutorMusical
+iPhone --|> AparelhoTelefonico
+iPhone --|> NavegadorInternet
+
+@enduml
